@@ -354,11 +354,17 @@ div.design::before {
   .design .image img {
     display: none;
   }
+  .design .image,
+  .design .text {
+    position: relative;
+    z-index: 2;
+    flex: auto;
+  }
 }
 .design .text {
   color: white;
   line-height: 3;
-  align-self: flex-end;
+
   font-weight: lighter;
 }
 .design .text::before {
@@ -509,6 +515,13 @@ video {
   text-align: center;
   z-index: 2;
 }
+@media (max-width: 767px) {
+  .video .text {
+    top: 0;
+    line-height: 2.5;
+    padding: 0;
+  }
+}
 .video .text h2 {
   text-transform: UPPERCASE;
   font-weight: normal;
@@ -648,8 +661,9 @@ video {
 .our-skills .container > div > div > img {
   border-style: none;
   width: 80px;
+  height: 80px;
   border-radius: 50%;
-  margin: 0px 13px 26px;
+  margin: 19px auto;
 }
 .our-skills .container > div > div .text p {
   padding-left: 208px;
